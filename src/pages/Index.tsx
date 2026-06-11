@@ -129,11 +129,19 @@ const Index = () => {
           </div>
         </nav>
 
+        {/* Gradient overlay — darkens top so title stays readable over the video */}
+        <div className="absolute inset-x-0 top-0 h-72 z-10 pointer-events-none"
+          style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, transparent 100%)' }}
+        />
+
         {/* Hero content */}
-        <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 py-12 text-center -translate-y-[20%]">
+        <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 py-12 text-center">
           <h1
             className="text-7xl md:text-8xl lg:text-9xl text-white tracking-tight whitespace-nowrap mb-8"
-            style={{ fontFamily: "'Instrument Serif', serif" }}
+            style={{
+              fontFamily: "'Instrument Serif', serif",
+              textShadow: '0 2px 24px rgba(0,0,0,0.7), 0 1px 4px rgba(0,0,0,0.9)',
+            }}
           >
             Creando en <em className="italic">3D</em>.
           </h1>
